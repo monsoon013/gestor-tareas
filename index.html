@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de tareas</title>
+    <link rel='stylesheet' href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="nombre-marca">To Do como el resto</span>
+        </div>
+        <div class="nav">
+            <nav class="menu">
+                <a class="item" href="#">Inicio</a>
+                <a class="item" href="#">Tareas</a>
+                <a class="item" href='#'>Crear nueva tarea</a>
+                <a class="item" href="#">Listas</a>
+                <a class="item" href="#">Proyectos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="workspace">
+
+        <div class="top-bar">
+            <h1>Tareas</h1>
+            <ul class="menu-top-bar">
+                <li><a href="#">Compartir</a></li>
+                <li><a href="#">Filtrar</a></li>
+                <li><a href="#">Ver</a></li>
+            </ul>
+        </div>
+
+        <div class="task-states">
+            <div class="tarea">
+                <div class="titulo-tarea">
+                    <h2>Sin título</h2>
+                </div>
+                <div class="text-area">
+                    <textarea id="cuerpo" class="descrip-task" placeholder="Define la tarea ..." rows="10"></textarea>
+                </div>
+                <div class="actions">
+                    <div class = "añadir">
+                        <button class="btn add-note">Añadir</button>
+                    </div>
+                    <div class="estado">
+                        <select name="estado-task">
+                            <option value="complete">Completada</option>
+                            <option value="ongoing">No completada</option>
+                        </select>
+                    </div>     
+                </div>       
+            </div>
+
+            <div class="estados-tareas">
+                <div class="completada">
+                    <div class="titulo-estado complete">
+                        <h2>Completadas</h2>
+                    </div>
+                    <div class="tareas-completadas">
+
+                    </div>
+                </div>
+                <div class="no-completada">
+                    <div class="titulo-estado no-completadas">
+                        <h2>No completadas</h2>
+                    </div>
+                    <div class="tareas-no-completadas">
+
+                    </div>
+                </div>
+                <div class="borrada">
+                    <div class="titulo-estado borradas">
+                        <h2>Papelera</h2>
+                    </div>
+                    <div class="tareas-borradas">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+     <script src="./js/script.js"></script>
+</body>
+</html>

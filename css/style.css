@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --primary-font: 'Manrope', sans-serif;
+    --primary-color: #131313;
+    --secondary-color: #5b5147;
+    --text-color: #494b4e;
+    --primary-background: #d8dee6;
+    --secondary-background: #2b3241;
+    --task-bckgr: #f8f8f8;
+    font-size: 16px;
+
+    --complete-bckgr: rgb(96, 160, 110);
+    --ongoing-bckgr: rgb(212, 159, 110);
+    --erased-bckgr: rgb(165, 84, 84);
+    
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+@media (max-width:767px){
+    :root{
+        font-size: 14px;
+    }
+}
+
+h1 {
+    font-size: 24px;
+    
+}
+
+h2{
+    font-size: 20px;
+}
+
+a{
+    text-decoration: unset;
+}
+
+header {
+    display: grid;
+    flex-direction: column;
+    align-content: start;
+    width: 20%;
+    padding: 20px;
+    background-color: var(--secondary-background);
+}
+
+.logo{
+    width: 100%;
+    margin-bottom: 2rem;
+    color: var(--primary-background);
+}
+
+.logo .nombre-marca {
+    font-size: 20px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    background-color: #1c212b;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.menu a {
+    padding: 10px ;
+    color: var(--task-bckgr);
+
+}
+
+.workspace{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+    background: var(--primary-background);
+
+}
+
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    background: var(--task-bckgr);
+    border-radius: 40px;
+    padding: 20px;
+    align-items: center;
+}
+
+.top-bar h1 {
+    padding: 0 10px;
+}
+
+.menu-top-bar {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+}
+
+
+.menu-top-bar a {
+    padding: 10px;
+    color: var(--text-color);
+}
+
+.task-states {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem 3rem;
+    gap: 7rem;
+}
+
+.task-states .tarea{
+    width: 50%;
+    background: var(--task-bckgr);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.descrip-task{
+    padding: 10px 5px;
+    border: 0;
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.añadir{
+    width: 50%;
+}
+
+.añadir .btn {  /*aquí va un hover*/
+    padding: 5px 10px;
+    border: unset;
+    background: unset;
+    font-family: 'Inter', sans-serif;
+}
+
+.estado{
+    width: 50%;
+    text-align: end;
+}
+
+.estado select {
+    border-radius: 20px;
+}
+
+
+.task-states .estados-tareas {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.estados-tareas .completada {
+    height: auto;
+    padding: 20px 15px;
+    border-radius: 20px;
+    background: var(--task-bckgr);
+}
+
+.estados-tareas .no-completada {
+    height: auto;
+    padding: 20px 15px;
+    border-radius: 20px;
+    background: var(--task-bckgr);
+}
+
+.estados-tareas .borradas {
+    height: auto;
+    padding: 20px 15px;
+    border-radius: 20px;
+    background: var(--task-bckgr);
+}
+
+.titulo-estado {
+    padding: 0;
+    margin: 0;
+}
+
