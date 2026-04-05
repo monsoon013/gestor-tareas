@@ -156,6 +156,16 @@ textarea:focus::placeholder {
     overflow: hidden;
 }
 
+.titulo-tarea#titulo {
+    width: 100%;
+    border: unset;
+    font-size: 20px;
+    font-weight: 600;
+    background: transparent;
+    outline: unset;
+    margin-bottom: 10px;
+}
+
 .actions {
     margin-top: auto;
     display: flex;
