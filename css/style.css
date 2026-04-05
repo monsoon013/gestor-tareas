@@ -24,7 +24,9 @@
 body {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+
 }
 
 @media (max-width:767px){
@@ -53,6 +55,11 @@ header {
     width: 20%;
     padding: 20px;
     background-color: var(--secondary-background);
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
 }
 
 .logo{
@@ -126,29 +133,74 @@ header {
 }
 
 .task-states .tarea{
+    display: flex;
+    flex-direction: column;
     width: 50%;
     background: var(--task-bckgr);
     padding: 20px;
     border-radius: 30px;
+    height: 250px;
+}
+
+.text-area {
+    flex-grow: 1;
 }
 
 .descrip-task{
-    padding: 10px 5px;
+    padding: 10px 10px;
     border: 0;
+    border-radius: 15px;
     width: 100%;
+    outline: unset;
+    resize: unset;
+    overflow: hidden;
 }
 
 .actions {
+    margin-top: auto;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding-top: 30px;
+}
+
+.titulo-tarea #titulo{
+    width: 100%;
+    border: unset;
+    font-size: 20px;
+    font-weight: 600;
+    background: transparent;
+    outline: none;
+    margin-bottom: 10px;
 }
 
 .añadir{
     width: 50%;
 }
 
-.añadir .btn {  /*aquí va un hover*/
+.añadir .add-note {
+    border: 1px solid var(--primary-color) !important;
+    border-radius: 15px;
+    background: var(--primary-color) !important;
+    color: var(--task-bckgr);
+    cursor: pointer;
+    font-weight:500;
+}
+
+.añadir .add-note:hover {
+    background:transparent !important;
+    border: 1px solid var(--secondary-background) !important;
+    color: var(--secondary-background) Im !important;
+}
+
+.empty-task {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    display:none;
+}
+
+.añadir .btn {  
     padding: 5px 10px;
     border: unset;
     background: unset;
@@ -161,8 +213,10 @@ header {
 }
 
 .estado select {
-    border-radius: 20px;
+    border-radius: 15px;
+    padding: 3px 7px;
 }
+
 
 
 .task-states .estados-tareas {
@@ -198,3 +252,84 @@ header {
     margin: 0;
 }
 
+
+.tarjeta-tarea {
+    background: var(--task-bckgr);
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 15px;
+    display: flex;
+    border: 1px solid var(--primary-background);
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+    cursor: grab;
+}
+
+.tarjeta-tarea:active{
+    cursor: grabbing;
+}
+
+.tareas-completadas,
+.tareas-no-completadas{
+    min-height: 150px;
+    padding-bottom: 10px;
+}
+
+
+.tarjeta-tarea h3{
+    font-size: 1.1rem;
+    color: var(--primary-color)
+}
+
+.tarjeta-tarea p{
+    font-size: 0.9rem;
+    color: var(--text-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.tag-estado {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:var(--task-bckgr);
+    margin-bottom: 8px;
+    width: fit-content;
+}
+
+.tag-complete {
+    background-color: var(--complete-bckgr);
+}
+
+.tag-ongoing {
+    background-color: var(--ongoing-bckgr);
+}
+
+.tag-borrada {
+    background-color: var(--erased-bckgr);
+}
+
+.btn-papelera{
+    background: transparent;
+    color: var(--erased-bckgr);
+    border: unset;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.btn-papelera:hover{
+    color: #8a2e2e;
+}
+
+.tarjeta-acciones {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
