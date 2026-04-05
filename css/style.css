@@ -138,6 +138,16 @@ header {
     width: 100%;
 }
 
+.titulo-tarea#titulo {
+    width: 100%;
+    border: unset;
+    font-size: 20px;
+    font-weight: 600;
+    background: transparent;
+    outline: unset;
+    margin-bottom: 10px;
+}
+
 .actions {
     display: flex;
     flex-direction: row;
