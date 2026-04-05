@@ -7,7 +7,10 @@
     <link rel='stylesheet' href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -39,11 +42,12 @@
         <div class="task-states">
             <div class="tarea">
                 <div class="titulo-tarea">
-                    <input type="text" id="titulo" placeholder="Sin título">
+                    <input type='text' id="titulo" placeholder="Sin título">
                 </div>
                 <div class="text-area">
-                    <textarea id="cuerpo" class="descrip-task" placeholder="Define la tarea ..." rows="10"></textarea>
+                    <textarea id="cuerpo" class="descrip-task" placeholder="Define la tarea ..." rows="3"></textarea>
                 </div>
+                <p class="empty-task">* Escribe un título y una descripción para la tarea</p>
                 <div class="actions">
                     <div class = "añadir">
                         <button class="btn add-note">Añadir</button>
