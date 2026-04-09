@@ -57,27 +57,17 @@ $(document).ready(function () {
         })
     })
 
-    //limitar las líneas de la decripcion
-    $('#cuerpo').on('keydown', function(e){
-        const lineas = $(this).val().split('\n').length;
-
-        if(e.keyCode === 13 || lineas >= 3){ //KEYCODE 13 = ENTER
-            e.preventDefault();
-            return false;
-        }
-    })
-
     //drag & drop
 
-    $('.tareas-completadas, .tareas-no-completadas').sortable({
-        connectWith: '.tareas-completadas, .tareas-no-completadas',
-        placeholder: 'tarjeta-placeholder',
-        receive: function(event, ui){
-            const $tarea = ui.item;
-            const $destino = $(this);
+    $('.tareas-completadas, .tareas-no-completadas').sortable({ //habilitar la función de arrastrar y soltar
+        connectWith: '.tareas-completadas, .tareas-no-completadas',  //permitir que se muevan entre las dos listas
+        placeholder: 'tarjeta-placeholder', //donde se va a colocar la tarjeta mientras se arrastra
+        receive: function(event, ui){ //evento al soltar la tarjeta
+            const $tarea = ui.item; //la tarjeta soltada
+            const $destino = $(this); //destino donde se coloca la tarjeta
 
-            if($destino.hasClass('tareas-completadas')){
-                $tarea.find('.tag-estado').text('Completada').attr('class', 'tag-estado tag-complete');
+            if($destino.hasClass('tareas-completadas')){ //lógica para cambiar el estado de la tarjeta al moverla
+                $tarea.find('.tag-estado').text('Completada').attr('class', 'tag-estado tag-complete'); //actualizar el texto y la clase del tag.
             }else if ($destino.hasClass('tareas-no-completadas')){
                 $tarea.find('.tag-estado').text('Pendiente').attr('class', 'tag-estado tag-ongoing');
             }
