@@ -44,7 +44,7 @@ $(document).ready(function () {
         $descripcion.val('');
     });
 
-    $(document).on('click', '.btn-papelera', function(){
+    $(document).on('click', '.btn-papelera', function(){ //referenciar al document para que detecte las nuevas tareas creadas
         const $tarjeta = $(this).closest('.tarjeta-tarea');
 
         $tarjeta.fadeOut(300, function(){
